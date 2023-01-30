@@ -2,6 +2,7 @@ var http = require('http');
 
 var server = http.createServer(function (req, res) {
   if (req.url == '/') {
+    // Lachica, Giann Kenneth / 10-30-23 / WD201
     res.writeHead(200, { 'Content-type': 'text/html' });
 
     res.write(
@@ -9,6 +10,7 @@ var server = http.createServer(function (req, res) {
     );
     res.end();
   } else if (req.url == '/about') {
+    // Lachica, Giann Kenneth / 10-30-23 / WD201
     res.writeHead(200, { 'Content-type': 'text/html' });
 
     res.write(
@@ -16,6 +18,7 @@ var server = http.createServer(function (req, res) {
     );
     res.end();
   } else if (req.url == '/gallery') {
+    // Lachica, Giann Kenneth / 10-30-23 / WD201
     res.writeHead(200, { 'Content-type': 'text/html' });
 
     res.write('<h1>This is the Gallery Page</h1>');
