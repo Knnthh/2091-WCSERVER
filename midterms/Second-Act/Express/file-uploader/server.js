@@ -16,10 +16,16 @@ const fileStorage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: fileStorage});
+const upload = multer({ storage: fileStorage });
 
 app.post('/uploads', upload.single('myFile'), (req, res) => {
   console.log(req.file);
 
   req.file.mimetype = mime.lookup(req.file.originalname);
-})
+
+  res.sendFile(path.join(__dirname, 'file-uploaded.html'));
+});
+
+app.get('file-upload', (req, res) => {
+  res.sendFile(__dirname + '/' + 'file-upload.html');
+});
