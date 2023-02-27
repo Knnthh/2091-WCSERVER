@@ -3,7 +3,7 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
-var urlencodedParser = bodyParser.urlencodedParser({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/' + 'index.html');
