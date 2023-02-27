@@ -29,3 +29,7 @@ app.post('/uploads', upload.single('myFile'), (req, res) => {
 app.get('file-upload', (req, res) => {
   res.sendFile(__dirname + '/' + 'file-upload.html');
 });
+
+app.listen(3000, function () {
+  console.log('Server is runing at localhost:3000');
+});
